@@ -1,6 +1,6 @@
 
 
-const options = [".rock",".paper",".sciccors"]
+const options = [".rock",".paper",".scissors"]
 const array = [0,1,2,0,1,2,0,1,2,0,1,2]
 
 
@@ -15,7 +15,7 @@ options.forEach(i => {
                 break;
             case ".rock": player1Choice = 1 
                 break;
-            case ".sciccors": player1Choice = 2
+            case ".Scissors": player1Choice = 2
                 break;
             default:
                 break;
@@ -47,7 +47,7 @@ function changeImg(playerChoice,imageId,p) {
         case 1: $(imageId).attr("src","imgs/Rock_"+p+".png")
             
             break;
-        case 2: $(imageId).attr("src","imgs/Sciccor_"+p+".png")
+        case 2: $(imageId).attr("src","imgs/Scissor_"+p+".png")
             
             break;
     
