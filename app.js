@@ -1,7 +1,7 @@
 
 
 const options = [".rock",".paper",".scissors"]
-const array = [0,1,2,0,1,2,0,1,2,0,1,2]
+const imgRotationArray = [0,1,2,0,1,2,0,1,2,0,1,2]
 
 
 let player1Choice = ""
@@ -15,7 +15,7 @@ options.forEach(i => {
                 break;
             case ".rock": player1Choice = 1 
                 break;
-            case ".Scissors": player1Choice = 2
+            case ".scissors": player1Choice = 2
                 break;
             default:
                 break;
@@ -31,10 +31,10 @@ options.forEach(i => {
 
 
 function gameStart (){
+    $(".winner").text("")
+    imgRotation()
     changeImg(player1Choice,"#player1_img","P1")
-    changeImg(player2Choice,"#player2_img","P2")
-    winner(player1Choice,player2Choice)
-
+    
     
 
 }
@@ -69,12 +69,23 @@ function winner(player1, player2){
     }
 
 
-    array.forEach((element,i) => {
+    function imgRotation (){
+        imgRotationArray.forEach((element,i) => {
         
-        setTimeout(()=>{
-            changeImg(element,"#player2_img","P2")
+            setTimeout(()=>{
+                changeImg(element,"#player2_img","P2")
+            
+            },i * 100)
+            
+        });
+            setTimeout(()=>{
+                player2Anwser()
+            }, 1200)
+    }
+
+    function player2Anwser (){
         
-        },i * 100)
-        
-        
-    });
+        changeImg(player2Choice,"#player2_img","P2")
+        winner(player1Choice,player2Choice)
+    }
+
