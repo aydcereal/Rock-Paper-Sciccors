@@ -1,0 +1,25 @@
+h1 {
+ text-align: center;
+ margin: 40px;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+img{
+    border: 10px;
+    border-style: solid;
+}
+
+.btn {
+   border-color: gray;
+   font-size: 36px;
+   border-width: 4px;
+}
+
+body {
+    background-color: #3AB0FF;
+}
+
